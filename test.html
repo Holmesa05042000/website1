@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Shop</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+    <header>
+        <h1>Computer Shop</h1>
+    </header>
+    <main>
+        <section class="product-list">
+            <h2>Available Products</h2>
+            <div class="product" id="product1">
+                <h3>Gaming Laptop</h3>
+                <p>Price: $1500</p>
+                <button onclick="addToCart('Gaming Laptop', 1500)">Add to Cart</button>
+            </div>
+            <div class="product" id="product2">
+                <h3>Mechanical Keyboard</h3>
+                <p>Price: $100</p>
+                <button onclick="addToCart('Mechanical Keyboard', 100)">Add to Cart</button>
+            </div>
+            <div class="product" id="product3">
+                <h3>Gaming Mouse</h3>
+                <p>Price: $50</p>
+                <button onclick="addToCart('Gaming Mouse', 50)">Add to Cart</button>
+            </div>
+        </section>
+        <section class="order-form">
+            <h2>Your Order</h2>
+            <div id="cart-items"></div>
+            <div>
+                <strong>Total: $<span id="total-price">0</span></strong>
+            </div>
+            <form id="orderForm" onsubmit="submitOrder(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+                <button type="submit">Place Order</button>
+            </form>
+        </section>
+    </main>
+    <script src="test.js"></script>
+</body>
+</html>
